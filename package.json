@@ -1,0 +1,28 @@
+{
+  "name": "hexo-renderer-react-static-page",
+  "description": "React static page renderer plugin for Hexo.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cherry Ng",
+    "email": "cherry92@gmail.com"
+  },
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "hexo",
+    "renderer",
+    "react",
+    "jsx"
+  ],
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cherrry/hexo-renderer-react-static-page.git"
+  },
+  "dependencies": {
+    "babel-core": "^6.11.4",
+    "eval": "^0.1.1",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
+  }
+}
