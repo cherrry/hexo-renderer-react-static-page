@@ -11,11 +11,10 @@ hexo.extend.renderer.register('jsx', 'html', function (data, locals) {
   var { propsFunc, Component } = reval(js.code, data.path, null, true)
 
   var props = propsFunc(locals)
-  var element = React.createElement(Component.default || Component, props)
-
-  var markup = ReactDOMServer.renderToString(element)
-  if (markup.match('^<html')) {
-    return markup
+  if (props.type === 'layout') {
+    return ReactDOMServer.renderToString(
+      React.createElement(Component, props.data)
+    )
   }
-  return { props, element }
+  return props
 }, true)
