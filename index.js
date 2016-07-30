@@ -12,7 +12,7 @@ hexo.extend.renderer.register('jsx', 'html', function (data, locals) {
 
   var props = propsFunc(locals)
   if (props.type === 'layout') {
-    return ReactDOMServer.renderToString(
+    return ReactDOMServer.renderToStaticMarkup(
       React.createElement(Component, props.data)
     )
   }
